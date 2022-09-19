@@ -1,0 +1,19 @@
+Window and Documents are the Objects in javascript.
+
+Window is the parent of All
+
+Under window there is Document and Screen
+
+
+Window:
+   Window object is the top object for Document and Screen object.
+   Each tab has different window.
+   
+Document:
+    Document is constructed after the window.
+    It is HTML Form.
+    It consist of information about the elements of HTML.
+    
+   
+ 
+
