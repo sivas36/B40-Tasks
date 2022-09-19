@@ -1,0 +1,23 @@
+HTTP/1.1    
+
+HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it
+
+It works on the textual format.    
+
+There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+
+It uses requests resource Inlining for use getting multiple pages
+
+It compresses data by itself
+
+HTTP/2
+
+HTTP/2, however, multiplexes streams within a single TCP connection, and will have to implement flow control in a different manner.
+
+It works on the binary protocol.
+
+It allows multiplexing so one TCP connection is required for multiple requests.
+
+It uses PUSH frame by server that collects all multiple pages 
+
+It uses HPACK for data compression.
