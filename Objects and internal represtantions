@@ -1,0 +1,23 @@
+What is Object?
+   Object is user defined data type in javascript,It is used to store collection of arrays,primitive data types using single reference,
+   It is an key:value pair
+   below syntax
+     name is the key
+     siva is the value
+   
+   Syntax:
+        var obj={
+            name:"siva",
+            dob:"26/04/2001"
+        }
+        
+    objects can be can be accessed in two types:
+       they are
+                dot 
+                box
+    Dot:
+       obj.name -> siva
+    box
+       obj[name] -> siva
+       
+       
