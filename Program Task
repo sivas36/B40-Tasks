@@ -1,0 +1,89 @@
+Question 1:
+Write a JavaScript function to generate an array between two integers of 1 step length.
+
+Input :
+console.log(range(3, 7));
+Expected Output:
+[3,4, 5, 6, 7]
+
+Input :
+console.log(range(-4, 7));
+Expected Output:
+[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+ Answer:
+    var d=[];  // empty array to store the values
+    
+    //function to find the range.
+    function range(a,b){
+    
+        for(var i=a;i<=b;i++){
+            
+            d.push(i);
+        }
+        return d;
+    }
+    
+    
+    console.log(range(-4,7));
+___________________________________________________________________________________________________________________________________________________________
+
+
+Question 2:
+Write a JavaScript program to find the most frequent item of an array.
+Sample array: 
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+Sample Output: q ( 5 times )
+
+Answer:
+
+
+  var b={};
+         
+        function maxim(obj){
+             var max=0;
+             
+         //this loop will find the max count values of elements
+         for(key in obj){
+            if(obj[key]>max){
+              max=obj[key];
+            }
+        }
+         //with the help of max we can find most repeated value
+         for(key in obj){
+            if(obj[key]==max){
+              console.log(key + " " + max + " times")
+            }
+        }
+        }
+        
+        //reapeat function to find the how many times the each value repeated
+        function repeat(a){
+            //initially looping thorugh the arrays
+            for(var i=0;i<a.length;i++){
+                //initially obj is undefined so replace with 0.
+                 if(b[a[i]]==undefined){
+                     b[a[i]]=1;
+                 }
+                 //we need to make sure same digit is not counted in repeated manner.
+                 //if value in arrays is not counted we can count.
+                 //else no need to count.
+                 //so checking them with condition.
+                 if(b[a[i]]<=1){
+                     for(var j=i+1;j<a.length;j++){
+                         if(a[i]==a[j]){
+                             b[a[i]]=b[a[i]]+1;
+                         }
+                     }
+                 }
+                 
+            }
+            //then we need to find max repeated count.
+            //for that need to call maxim function in line 20
+            maxim(b);
+            
+        }
+  
+        
+        repeat([3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3]); // will return the answer.
+  
