@@ -1,0 +1,25 @@
+1.how to compare two json have the same properties without order.
+
+   JSON.stringify(object1) === JSON.stringify(object2)
+
+
+2.Program to display all the countries flag in console.
+
+    var result = JSON.parse(request.response);
+    console.log(result);
+
+    for(let i=0;i<result.length;i++){
+        console.log(result[i].flag);
+    }
+    
+ 
+3.Program to display all the countries name,region,subrejion,population in console.
+    var result = JSON.parse(request.response);
+    console.log(result);
+
+    for(let i=0;i<result.length;i++){
+        console.log(result[i].name,
+            result[i].region,
+            result[i].subregion,
+            result[i].population);
+    }
