@@ -1,0 +1,20 @@
+1.Create resume data using object.
+
+
+var obj ={
+   name:"siva",
+   age:18,
+   college:"paavai engineering college",
+   CGPA:8.5,
+   Passedout:2022,
+   skills:["C++","java","HTML","CSS"]
+   gender:"Male"
+}
+
+2.Iteracte over JSON object.
+
+
+for(var key in obj){
+   console.log(obj[key]);
+}
+
