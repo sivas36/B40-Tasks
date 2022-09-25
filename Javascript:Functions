@@ -1,0 +1,218 @@
+Odd Numbers
+
+    Annonymouse function
+    var a = function(arr){
+       for(var i=0;i<arr.length;i++){
+         if(arr[i]%2 != 0){
+            console.log(arr[i]);
+         }
+       }
+    }
+ 
+    IIFE
+     var odd = (function(arr){
+     for(var i=0;i<arr.length;i++){
+         if(arr[i]%2 != 0){
+            console.log(arr[i]);
+         }
+       }
+   })([2,3,4,5]) 
+   
+
+     Arrow Function
+     var odd = (arr) =>{
+      for(var i=0;i<arr.length;i++){
+         if(arr[i]%2 != 0){
+            console.log(arr[i]);
+         }
+       }
+     }
+     
+Covert All strings to Title caps
+  
+    Annonymouse function
+      var caps =  function(arr){
+            
+            for(var i=0;i<arr.length;i++){
+               arr[i] = arr[i].toUpperCase();
+            }
+     console.log(arr);
+    }
+    
+    IIFE
+    var caps = ( 
+            function(arr){
+            for(var i=0;i<arr.length;i++){
+               arr[i] = arr[i].toUpperCase();
+            }
+            console.log(arr);}
+            )
+      (['siva','kumar']);
+    
+    Arrow Function
+     var caps = (arr) = >{
+     for(var i=0;i<arr.length;i++){
+               arr[i] = arr[i].toUpperCase();
+            }
+     console.log(arr);
+     }
+
+Sum of All numbers in array
+  
+    Annonymouse function
+      var sum =  function(arr){
+            let sum = 0;
+            for(var i=0;i<arr.length;i++){ 
+                sum += arr[i];
+            }
+     console.log(sum);
+    }
+    
+    IIFE
+    var sums = ( function(arr){
+            let sum = 0;
+            for(var i=0;i<arr.length;i++){ 
+                sum += arr[i];
+            }
+     console.log(sum);
+     }
+    )
+      ([10,20,30]);
+    
+    Arrow Function
+     var sum = (arr) = >{
+        let sum = 0;
+            for(var i=0;i<arr.length;i++){ 
+                sum += arr[i];
+            }
+       console.log(sum);
+     }
+   
+Return all the prime Numbers in an array
+     var findprime =function(a){
+        if(a<=1){
+            return false;
+        }
+        for(let j=2;j<a;j++){
+             if(a%j==0){
+                return false;
+             }
+        }
+        return true;
+      }
+
+    Annonymouse function
+   
+     var prime =  function(arr){
+            for(var i=0;i<arr.length;i++){  
+              if(findprime(arr[i])){
+                   console.log(arr[i]);
+              }
+            }
+     
+    }
+    
+    IIFE
+    var sum = (function(arr){
+            for(var i=0;i<arr.length;i++){  
+              if(findprime(arr[i])){
+                   console.log(arr[i]);
+              }
+            }
+     
+    }
+    )
+    ([1,2,3]);
+    
+    Arrow Function
+     var sum = (arr) = >{
+            for(var i=0;i<arr.length;i++){  
+              if(findprime(arr[i])){
+                   console.log(arr[i]);
+              }
+            }
+     
+    }
+
+Return palindrome in an array
+  Common Function:
+    let findPalindrome = function(a){
+      let num=a; 
+      let rev=0;  
+      let dup;
+      while(num>0){
+          dup=num%10; 
+          rev = rev*10+dup; 
+          num=Math.floor(num/10); 
+        }
+         
+         
+    if(a === rev){
+        return true;
+    }
+    else{
+        return false;
+    }
+  }
+ 
+  Anonymous Function:
+    let palindrome = function(arr){
+     for(var i=0;i<arr.length;i++){
+         if(findPalindrome(arr[i])){
+             console.log(arr[i]);
+         }
+     }
+    }
+   Arrow Function:
+     let palindrome = (arr) =>{
+          for(var i=0;i<arr.length;i++){
+         if(findPalindrome(arr[i])){
+             console.log(arr[i]);
+         }
+     }
+     
+     }
+   IIFE
+     let palindrome=(function(arr){
+     for(var i=0;i<arr.length;i++){
+         if(findPalindrome(arr[i])){
+             console.log(arr[i]);
+         }
+     }
+    })([111,121,243]);
+
+Return Median of 2 sorted Arrays
+     
+      var a =[2,3,4,5];
+      var b =[5,6,7,8];
+     
+      let Median = (a,b) =>{
+        let med = (a[a.length-1]+b[0])/2;
+        return med;
+        
+      }
+
+Remove Duplicates from an Array 
+    var RemoveDup =(a) =>{ 
+   
+    for(var i=0;i<a.length-1;i++){
+        for(var j=i+1;j<a.length;j++){
+            if(a[i]==a[j]){
+                a.splice(j,1);
+            }
+        }
+    }
+    console.log(a);
+    }
+
+Rotate an Array by K times
+
+    var Rotate =(arr,a) =>{ 
+        
+      for(let i=0;i<a;i++){
+         let s=arr.pop();
+         arr.unshift(s);
+      }
+       console.log(arr);
+    
+    }
