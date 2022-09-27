@@ -1,0 +1,103 @@
+//Task 1
+class Movie{
+  constructor(title,studio,rating){
+      this.title=title;
+      this.studio=studio;
+      if(rating==undefined){
+        this.rating="PG"
+      }else{
+        this.rating=rating;
+      }
+      
+  }
+
+  
+}
+
+
+
+var getPg=(arr)=>{
+   var arr2=[];
+    for(let i=0;i<arr.length;i++){
+      if(arr[i].rating.includes("PG")){
+        arr2.push(arr[i]);
+      }
+      
+    }
+    return arr2;
+}
+
+var m1 = new Movie("Casino","EonProduction");
+var m2 = new Movie("Vikaram","SunProduction",'R');
+var m3 = new Movie("RRR","SUN NETWORK",'PG13');
+
+console.log(getPg([m1,m2,m3]));
+
+
+---------------------------------------------------------
+
+//Task 2
+class Circle{
+
+  constructor(radius=1.0,color="red"){
+    this.radius=radius;
+    this.color=color;
+  }
+
+
+  getRadius(){
+    return this.radius;
+  }
+  setRadius(radius){
+    this.radius=radius;
+  }
+  getColor(){
+    return this.color;
+  }
+  setColor(color){
+    this.color=color;
+  }
+  toString(){
+       return `Circle [radius=${this.color},color= ${this.radius}]`
+  }
+  area(){
+    let r=this.radius;
+     return 3.14*(r*r);
+  }
+  circumference(){
+    let r= this.radius;
+    return 2*3.14*r;
+  }
+}
+
+---------------------------------------------------------
+//Task 3
+class Person{
+    constructor(name,age,gender,Ph,mail){
+      this.name=name;
+      this.age=age;
+      this.gender=gender;
+      this.Ph=Ph;
+      this.mail=mail;
+    }
+}
+
+
+let p1 = new Person("Sivakumar",18,'M','900033','siva23@gmail');
+
+---------------------------------------------------------
+//Task 4
+class Uber{
+  constructor(Source,Destination,Km){
+    this.Source=Source;
+    this.Destination=Destination;
+    this.km=km;
+  }
+
+  Calculateprice(){
+    return this.km*20; //consider 20RS FOR A km.
+  }
+}
+
+let Customer1 = new Uber("chennai","coimbatore",300);
+Customer1.Calculateprice() //---> 300*20 --> 6000
