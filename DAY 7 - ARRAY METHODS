@@ -1,0 +1,29 @@
+ var result = JSON.parse(request.response);
+ 
+ Task 1:
+   var Asia = result.filter((ele)=>ele.region==='Asia').map((ele)=>ele.name)
+    console.log(Asia);
+ -------------------------------------------
+ Task 2:
+   var lessThan2l = result.filter((ele)=>ele.population<200000).map((ele)=>ele.name);
+    console.log(lessThan2l);
+ -------------------------------------------
+  Task 3:
+   result.forEach(element => {
+      console.log(`${element.name} , ${element.capital} ,${element.flag}`)
+   });
+ -------------------------------------------
+  Task 4:
+   var total=result.reduce((acc,ele)=>ele.population+acc,0);
+   console.log(total);
+
+ -------------------------------------------
+   Task 5:
+    for(var i=0;i<result.length;i++){
+      if(result[i].currencies!=undefined){
+          if(result[i].currencies[0].code=='USD'){
+            console.log(result[i].name)
+          }
+      }
+       
+    }
